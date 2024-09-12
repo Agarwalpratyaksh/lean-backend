@@ -1,0 +1,1 @@
+export const DB_NAME = "videotube" //we can also save this in env but not needed as this we dont need to hide
