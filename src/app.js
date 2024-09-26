@@ -1,5 +1,6 @@
 // here we will write express code
 import express from "express"
+import cors from "cors"
 import cookieParser from "cookie-parser";
 
 const app= express();
@@ -15,6 +16,12 @@ app.use(express.urlencoded({extended:true, limit:"16kb"}))
 app.use(express.static("public"))
 app.use(cookieParser())
 
+//route import 
+import userRouter from "./routes/user.routes.js"
+
+
+//route declaration
+app.use("/api/v1/user",userRouter)
 
 
 
